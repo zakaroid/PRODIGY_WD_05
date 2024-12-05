@@ -1,0 +1,650 @@
+/* adding poppins font style  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+
+/* Defining the variables for colors and theme  */
+:root{
+    --main-color:#d1ec37;
+    --cont-color:#3265d4;
+    --font-color:rgb(16, 0, 73);
+    --heading-color:black;
+    --dim-color:rgb(1, 65, 95);
+}
+
+
+
+
+/* setting default css to 0 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* --------------------------- Designing the Scroll Bar --------------------- */
+/* Custom Scrollbar for WebKit Browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent; /* Make the thumb transparent */
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent; /* Make the corner transparent */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+    scrollbar-width: none; /* Hide the scrollbar */
+    scrollbar-color: transparent transparent; /* Make the thumb and track transparent */
+}
+
+
+
+
+
+/* for firefox users  */
+html{
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+
+
+
+/* Adding style to the body  */
+body{
+    
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    color: var(--font-color);
+    overflow-y: hidden;
+
+}
+
+
+
+
+/* -------------------- Styling the main div -------------------------  */
+.main{
+    background-color: var(--main-color);
+    display: flex;
+    height: 100%;
+}
+
+
+
+
+
+/* -----------------  Styling the left section ----------------------- */
+.left-section{
+    background-color: var(--cont-color);
+    height: 100vh;
+    width: 30vw;
+    margin: 0.625rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+
+/* Styling the Left search bar  */
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.625rem;
+    margin: 1.25rem;
+}
+
+
+/* Styling the input inside the search  */
+.search input{
+    width: 100%;
+    padding: 0.5rem ;
+    border-radius: 1.563rem;
+    border: none;
+    background-color: transparent;
+    color: var(--font-color);
+    font-size: 0.9rem;
+}.search input:focus{
+    outline: none;
+}.search input::placeholder{
+    color:var(--dim-color) ;
+    font-size: 0.9rem;
+}
+
+/* styling the imgs of search bar  */
+.search img{
+    cursor:pointer;
+}
+
+
+.search #go:hover{
+    background-color: var(--main-color);
+    border-radius: 100%;
+    transition: 0.5s ease;
+}
+
+
+
+/* Styling the Header  */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    display: none;
+    padding-right: 0.725rem;
+    cursor: pointer;
+}
+
+
+
+/* styling the heading of the left container  */
+.left-heading{
+    margin: 1.25rem;
+    color: var(--heading-color);
+    font-size: 1.4375rem;
+}
+
+
+/* Styling the cards div  */
+.cards{
+    overflow-y: auto;
+    height: 80vh;
+}
+
+
+
+/* Styling the card inside the left section  */
+.card{
+    width: 80%;
+    height: 2rem;
+    padding: 1.25rem;
+    margin: 1.25rem auto;
+    display: flex;
+    grid-template-columns: 15% 65% 15%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+    color: var(--font-color);
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+
+}
+
+
+
+/* styling the condition text  */
+.card .card-condition{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    justify-content: space-between;
+}
+
+
+/* styling the image of the card  */
+.card .card-condition .condition-img{
+    background-color: var(--cont-color);
+    border-radius: 100%;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+} 
+.card .card-condition .condition-img img{
+    width: 2.5rem;
+
+}
+
+
+/* Styling font size of the text  */
+.card .condition-text{
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+/* -----------------  Styling the right section ----------------------- */
+.right-section{
+    background-color: var(--cont-color);
+    width: 100vw;
+    height: 100vh;
+    margin: 0.625rem;
+    border-radius: 0.5rem;
+    position: relative;
+
+}
+
+
+/* Styling the Hamburger */
+.hamburger{
+    margin: 1.25rem;
+    width: 2.5rem;
+    height: 10%;
+    background-color: var(--main-color);
+    display: none;
+}
+.hamburger img{
+    cursor: pointer;
+}
+
+
+
+/* Styling the weather card  */
+.weather-card{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 3.125rem 1rem 3.125rem;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    border: 0.4rem solid rgb(73, 0, 0);
+    
+}
+
+
+
+
+/* styling temperature text font size  */
+.weather-card .temperature .today-temp{
+    font-size: 5rem;
+}
+
+
+
+
+/* styling city name under temperature */
+.weather-card .temperature .location .city-name{
+    font-size: 1.475rem;
+}
+
+
+/* Styling the right side of the weather card  */
+.weather-card .today-temp-condition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+/* styling country name under temperature  */
+.weather-card .temperature .location .country-name{
+    color: var(--dim-color);
+}
+
+
+
+
+/* styling image of weather card  */
+.weather-card .today-temp-condition .temp-img img{
+    width: 9.375rem;
+}
+
+
+
+
+/* styling the font size of condition text under temperature image  */
+.weather-card .today-temp-condition .temp-condition{
+    font-size: 1.4rem;
+}
+
+
+
+/* Styling today's Highlight section  */
+.todays-highlights{
+    background-color: var(--main-color);
+    margin: 1rem 3.125rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1.25rem;
+    border: .4rem solid rgb(73, 0, 0);
+    padding-bottom: 1rem;
+}
+
+
+
+
+/* styling the today highlight card  */
+.todays-highlights .today-highlight{
+    height: 10.625rem;
+    width: 80%;
+    border-radius: 1.25rem;
+    margin: 1rem 1rem 0 1rem;
+    border: .345rem solid rgb(73, 0, 0);
+    padding: 0.625rem;
+    background-color: var(--cont-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+/* styling the title of every card  */
+.todays-highlights .today-highlight .title{
+    font-size: 1.125rem;
+}
+
+
+/* styling the value of every card  */
+.todays-highlights .today-highlight .value{
+    font-size: 3rem;
+}
+
+
+
+/* styling the condition text of every card  */
+.todays-highlights .today-highlight .condition{
+    font-size: 0.925rem;
+    color: var(--dim-color);
+}
+
+
+
+/* Styling sunset and sunrise  */
+.sunset-sunrise .sunrise,.sunset-sunrise .sunset{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+
+/* Resizing the sunset and sunrise image  */
+.sun-img img{
+    width: 2.5rem;
+    background-color: var(--main-color);
+    padding:.25rem;
+    border-radius: 100%;
+}
+
+
+/* styling the text of sunset and sunrise  */
+.sun-time{
+    font-size: 1.3rem;
+}
+
+
+.sun-time .time{
+    font-size: 1rem;
+}
+
+
+
+/* Styling the highest lowest temp card  */
+.highest, .lowest{
+    font-size: 1.3rem;
+}
+.highest .highest-temperature ,.lowest .lowest-temperature{
+    font-size: 1rem;
+}
+
+
+
+
+/* Styling the toast bar notification for error handling  */
+.toast-bar{
+    position: absolute;
+    top: -200%;
+    right:1.8% ;
+    background-color: rgba(255, 255, 255, 0.89);
+    height: 5.625rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    gap: 1.875rem;
+    padding: 0 1.25rem;
+    z-index: 16;
+    transition: all 1s ease;
+    
+}
+
+/* styling the image of toast bar  */
+.toast-bar .error-img{
+    width: 4.375rem;
+}
+
+
+/* styling the message of toast bar  */
+.toast-bar .error-msg{
+    font-size: 0.875rem;
+    
+}
+
+
+/* styling the error-cross image  of toast bar  */
+.toast-bar .error-cross{
+    width: 3.125rem;
+    cursor: pointer;
+}
+
+
+
+/* Adding Responsiveness to max width of 1290 px   */
+
+
+@media screen and (max-width: 1290px) {
+    /* enabling overflow in body tag  */
+    body{
+        overflow-y: auto;
+    }
+}
+
+
+/* Adding Responsiveness to max width of 1150 px   */
+
+
+@media screen and (max-width: 1150px) {
+
+
+    
+    /* ------------------Styling the Left Section and adding hamburger--------------------  */
+    .left-section{
+        left: -200%;
+        transition: all 1s ease;
+        position: absolute;
+        z-index: 5;
+        margin: 0;
+        border-radius:0 ;
+        width: 70vw;
+        height: 100vh;
+
+    }
+
+    /* Styling the header in the left section  */
+    .header #cross{
+        display: inline-block;
+    }
+
+    
+
+
+
+    /* -------------Styling the right section and making its width 100---------------------- */
+    .right-section{
+        margin: 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Making the hamburger visible  */
+    .hamburger{
+        display: inline;
+
+    }
+
+    /* Styling the Weather Card  */
+    .weather-card{
+        margin: 3.125rem 3.125rem 1rem 3.125rem;
+    }
+
+    /* Styling today's Highlight section  */
+    .todays-highlights{
+        height: 47vh;
+        overflow-y: auto;
+    }
+
+
+    .todays-highlights .today-highlight{
+        height: 13.125rem;
+    }
+
+    /* Decreasing the font size of the value of todays highlight card */
+    .todays-highlights .today-highlight .value{
+        font-size: 2.5rem;
+    }
+
+}
+
+
+
+
+
+
+/* Adding Responsiveness to max width of 780 px   */
+
+
+@media screen and (max-width: 780px) {
+
+    /* ------------------Styling the Left Section --------------------  */
+    .left-section{
+        width: 100%;
+        height: 300%;
+
+    }
+
+    
+    
+
+    /* --------Styling the right section---------  */
+    .right-section{
+        height: 100vh;
+    }
+
+    /* Styling todays highlight  */
+    .todays-highlights{
+        grid-template-columns: 1fr 1fr;
+        overflow-y: auto;
+        height: 40%;
+    }
+
+    /* Styling todays highlights every card's value's font size  */
+    .todays-highlights .today-highlight .value{
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+/* Adding Responsiveness to max width of 550 px   */
+
+@media screen and (max-width: 550px) {
+
+    /* Styling the right section  */
+    
+    .right-section{
+        height: 240vh;
+    }
+
+    /* Styling todays highlight  */
+    .todays-highlights{
+        grid-template-columns: 1fr;
+        padding: 0;
+        border: none;
+        background-color: var(--cont-color);
+        overflow-y: visible;
+    }
+
+    /* Styling today Highlight cards  */
+    .todays-highlights .today-highlight{
+        width: 93%;
+        margin: 0 0 1rem 0;
+        border: 0.4rem solid rgb(73, 0, 0);
+        background-color: var(--main-color);
+        height: 10.313rem;
+    }
+
+    /* Styling todays highlights every card's value's font size  */
+    .todays-highlights .today-highlight .value{
+        font-size: 3rem;
+    }
+
+    /* Adding some style to hamburger  */
+    .hamburger{
+        position: fixed;
+        z-index: 3;
+        background-color: var(--cont-color);
+        height: 1.875rem;
+        width: 100%;
+        margin: 0rem 0rem;
+        padding: 0.4rem 0rem 0.4rem 0.6rem;
+    }
+
+
+
+
+   /* styling temperature text font size  */
+    .weather-card .temperature .today-temp{
+        font-size: 2.8rem;
+
+    }
+
+
+    /* styling city name under temperature */
+    .weather-card .temperature .location .city-name{
+        font-size: 1rem;
+    }
+
+
+
+    .weather-card .temperature .feels-like{
+        font-size: 0.7rem;
+    }
+
+
+
+
+    /* styling image of weather card  */
+    .weather-card .today-temp-condition .temp-img img {
+        width: 6rem;
+    }
+
+
+
+
+    /* styling the font size of condition text under temperature image  */
+    .weather-card .today-temp-condition .temp-condition{
+        font-size: 0.7rem;
+    }
+
+
+    /* Making some changes in toast bar  */
+    .toast-bar{
+        width: 280px;
+    }
+    .toast-bar .error-msg{
+        font-size: 0.75rem;
+    }
+
+
+}

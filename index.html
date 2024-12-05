@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- linking css to the html file  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- adding the favicon -->
+    <link rel="icon" type="image/x-icon" href="Weather-icon.ico">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="main">
+
+        <!-- ---------------------- Last 15 days Weather Forecast Section ----------------------------- -->
+        <div class="left-section">
+
+
+            <!-- search bar for searching the weather  -->
+
+
+            <div class="search">
+                <img src="./assets/search.svg" alt="" srcset="">
+                <input type="text" placeholder="Search Weather" id="search" autocomplete="off">
+                <img id="go" src="./assets/go.svg" alt="" srcset="">
+            </div>
+
+            
+
+            <!-- Heading of weather forecast  -->
+            <div class="header">
+                <p class="left-heading">15 Days Forecast</p>
+                <img id="cross" src="./assets/cross.svg" alt="">
+            </div>
+
+
+            <!-- Cards will be placed here  -->
+        <div class="cards">
+
+            
+            
+        </div> <!-- Cards div end -->
+
+            
+
+
+
+
+        </div>  <!-- left section Div End -->
+
+
+
+
+
+
+
+
+        <!-- ---------------------- Today's Weather Forecast Section ----------------------------- -->
+        <div class="hamburger">
+            <img id="hamburger" src="./assets/hamburger.svg" alt="">
+        </div> 
+        <div class="right-section">
+
+
+
+
+
+            <!-- --------------------------Card for Displaying today's Weather--------------------------  -->
+            <div class="weather-card">
+
+                <!-- temperature  -->
+                <div class="temperature">
+                    <div class="feels-like" >Feels Like __°C</div>
+                    <div class="today-temp">_°C</div>
+                    <div class="location">
+                        <div class="city-name">__</div>
+                        <div class="country-name">__</div>
+                    </div>
+                </div>
+                <div class="today-temp-condition">
+                    <div class="temp-img"><img class="temperature-image" src="./assets/clear.svg" alt="" srcset=""></div>
+                    <div class="temp-condition">__</div>
+                </div>
+
+
+
+            </div> <!-- Weather card Div End -->
+
+
+
+
+
+            <!-- --------------------------Cards for Displaying today's Highlights like humidity, wind speed--------------------------  -->
+            <div class="todays-highlights">
+
+
+                <!-- ----------------Humidity Card------------------  -->
+                <div class="today-highlight humidity">
+                    <div class="title">Humidity</div>
+                    <div class="value" id="humidity">_%</div>
+                    <div class="condition" id="humidity-condition">__</div>
+                </div>
+
+
+
+                <!-- ----------------wind-speed Card------------------  -->
+                <div class="today-highlight wind-speed">
+                    <div class="title">Wind Speed</div>
+                    <div class="value" id="wind-speed">_km/h</div>
+                    <div class="condition" id="wind-speed-direction">__</div>
+                </div>
+
+
+
+                <!-- ----------------UV-Index Card------------------  -->
+                <div class="today-highlight uv-index">
+                    <div class="title">UV Index</div>
+                    <div class="value" id="uv-index">_</div>
+                    <div class="condition" id="uv-index-condition">__</div>
+                </div>
+
+
+
+                <!-- ----------------Sunset and Sunrise Card------------------  -->
+                <div class="today-highlight sunset-sunrise">
+                    <div class="title">Sunrise - Sunset</div>
+
+
+                <!-- ----------------Sunrise------------------  -->
+                    <div class="sunrise">
+                        <div class="sun-img"><img src="./assets/sunrise.svg" alt="" srcset=""></div>
+                        <div class="sun-time">
+                            Sunrise
+                            <div class="time" id="sunrise">__:__</div>
+                        </div>
+                    </div>
+
+
+                <!-- ----------------Sunset------------------  -->
+                    <div class="sunset">
+                        <div class="sun-img"><img  src="./assets/sunset.svg" alt="" srcset=""></div>
+                        <div class="sun-time">
+                            Sunset
+                            <div class="time" id="sunset">__:__</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- ----------------Visibility Card------------------  -->
+                <div class="today-highlight visibility">
+                    <div class="title">Visibility</div>
+                    <div class="value" id="visibility">_km</div>
+                    <div class="condition" id="visibility-condition">__</div>
+                </div>
+
+
+
+
+                <!-- ----------------Highest lowest temperature Card------------------  -->
+                <div class="today-highlight">
+                    <div class="title">Temperature</div>
+
+
+        
+                <!-- ----------------Highest Temperature------------------  -->
+                    <div class="highest">
+                        Highest
+                        <div class="highest-temperature" id="highest-temp">_°C</div>
+                    </div>
+
+
+
+                <!-- ----------------Lowest Temperature------------------  -->
+                    <div class="lowest">
+                        Lowest
+                        <div class="lowest-temperature" id="lowest-temp">_°C</div>
+                    </div>
+                </div>
+
+
+
+
+            </div>  <!-- todays highlight Div End -->
+
+
+
+
+        </div>  <!-- Right section Div End -->
+
+
+
+        
+        
+        
+        
+        <!-- Making toast Notification bar for Error Handling -->
+        <div class="toast-bar">
+                <div class="error-img"><img src="./assets/error.svg" alt=""></div>
+                <div class="error-msg">Please enter a valid location or check your Internet Connection and Try again</div>
+                <div class="error-cross"><img  src="./assets/error-cross.svg" id="error-cross" ></div>
+            
+        </div>
+    </div>  <!-- Main Div End -->
+
+
+    <!-- linking js file to the html file  -->
+    <script src="script.js"></script>
+
+</body>
+</html>
